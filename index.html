@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/cards.css">
+</head>
+<body>
+  <!-- Container that we'll append a bunch of cards into. -->
+  <!-- <div id="main-header"></div> -->
+  <div id="nav-header">
+      <span></span>
+      <span><a href="index.html">Home</a></span>
+      <span><a href="#">Search</a></span>
+      <span><a href="#">Sort</a></span>
+    </div>
+  <div id="hero"></div>
+  
+  <div id="cards-container"></div>
+
+  <!-- A mask to dim the lights. -->
+  <div id="mask"></div>
+
+  <!-- A popup lightbox that drills down into a card and shows more info. -->
+  <div id="lightbox-container"></div>
+  
+  
+  <!-- Thumbnail template. -->
+  <script id="thumbnail-template" type="x-tmpl-mustache">
+    <div id="{{ id }}" class="card" style="background-image: url({{ image }})"></div>
+  </script>  
+
+  <!-- Lightbox template. -->
+  <script id="lightbox-template" type="x-tmpl-mustache">
+    <div class="lightbox">
+      <div class="poster" style="background-image: url({{ image }})"></div>
+      <audio id="music" src="{{ song }}" controls></audio>
+      <div class="cast">{{ cast }}</div>
+      <div class="teaser">{{ teaser }}</div>
+    </div>
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
+  <script src="assets/cards.js"></script>
+</body>
+</html>
